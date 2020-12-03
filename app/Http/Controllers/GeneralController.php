@@ -111,7 +111,7 @@ class GeneralController extends Controller
     
            } else {
                
-            return redirect()->route('admin.about')->with('error', 'GeneDataral failed to update');
+            return redirect()->route('admin.about')->with('error', 'Data failed to update');
     
            }
 

@@ -36,11 +36,11 @@ class PCategoryController extends Controller
 
         if ( $pcategory->save()) {
 
-            return redirect()->route('admin.pcategory')->with('success', 'Category added successfully');
+            return redirect()->route('admin.pcategory')->with('success', 'Data added successfully');
     
            } else {
                
-            return redirect()->route('admin.pcategory')->with('error', 'category failed to add');
+            return redirect()->route('admin.pcategory')->with('error', 'Data failed to add');
     
            }
     }
@@ -87,11 +87,11 @@ class PCategoryController extends Controller
 
         if ( $pcategory->save()) {
 
-            return redirect()->route('admin.pcategory')->with('success', 'Category updated successfully');
+            return redirect()->route('admin.pcategory')->with('success', 'Data updated successfully');
     
            } else {
                
-            return redirect()->route('admin.pcategory.create')->with('error', 'category failed to update');
+            return redirect()->route('admin.pcategory.create')->with('error', 'Data failed to update');
     
            }
     }
@@ -107,6 +107,6 @@ class PCategoryController extends Controller
         $pcategory = Pcategory::findOrFail($id);
         $pcategory->delete();
 
-        return redirect()->route('admin.pcategory')->with('success', 'Category deleted successfully');
+        return redirect()->route('admin.pcategory')->with('success', 'Data deleted successfully');
     }
 }

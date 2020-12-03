@@ -64,11 +64,3 @@
 
   </form>
 @endsection
-
-@push('scripts')
-<script>
-    $(document).ready(function() {
-        $('#summernote').summernote();
-    });
-  </script>
-@endpush

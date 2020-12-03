@@ -12,14 +12,14 @@
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://vanjava.net/blog/{{ $post->slug }}">
+<meta property="og:url" content="127.0.0.1:8000/blog/{{ $post->slug }}">
 <meta property="og:title" content="{{ $post->title }}">
 <meta property="og:description" content="{{ $post->meta_desc }}">
 <meta property="og:image" content="{{ asset('storage/'.$post->cover) }}">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://vanjava.net/blog/{{ $post->slug }}">
+<meta property="twitter:url" content="127.0.0.1:8000/blog/{{ $post->slug }}">
 <meta property="twitter:title" content="{{ $post->title }}">
 <meta property="twitter:description" content="{{ $post->meta_desc }}">
 <meta property="twitter:image" content="{{ asset('storage/'.$post->cover) }}">
@@ -65,7 +65,7 @@
                 <ul>
                   <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="{{route('blogshow',$post->slug)}}">{{ $post->user->name }}</a></li>
                   <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="{{route('blogshow',$post->slug)}}"><time datetime="2020-01-01">{{ Carbon\Carbon::parse($post->created_at)->format("d F, Y") }}</time></a></li>
-                  <li class="d-flex align-items-center"><i class="icofont-comment"></i> <a href="{{route('blogshow',$post->slug)}}">12 Comments</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-comment"></i> <a href="{{ URL::current()}}#disqus_thread">Comments</a></li>
                 </ul>
               </div>
 

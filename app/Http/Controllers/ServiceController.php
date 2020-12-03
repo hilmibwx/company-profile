@@ -53,11 +53,11 @@ class ServiceController extends Controller
 
        if ( $service->save()) {
 
-        return redirect()->route('admin.service')->with('success', 'service added successfully');
+        return redirect()->route('admin.service')->with('success', 'Data added successfully');
 
        } else {
            
-        return redirect()->route('admin.service.create')->with('error', 'service failed to add');
+        return redirect()->route('admin.service.create')->with('error', 'Data failed to add');
 
        }
     }
@@ -111,11 +111,11 @@ class ServiceController extends Controller
 
        if ( $service->save()) {
 
-        return redirect()->route('admin.service')->with('success', 'service added successfully');
+        return redirect()->route('admin.service')->with('success', 'Data added successfully');
 
        } else {
            
-        return redirect()->route('admin.service.create')->with('error', 'service failed to add');
+        return redirect()->route('admin.service.create')->with('error', 'Data failed to add');
 
        }
     }
@@ -132,6 +132,6 @@ class ServiceController extends Controller
 
         $service->delete();
         
-        return redirect()->route('admin.service')->with('success', 'service deleted successfully');
+        return redirect()->route('admin.service')->with('success', 'Data deleted successfully');
     }
 }

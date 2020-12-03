@@ -155,11 +155,11 @@ class PostController extends Controller
 
         if ($update) {
 
-                return redirect()->route('admin.post')->with('success', 'Post added successfully');
+                return redirect()->route('admin.post')->with('success', 'Data added successfully');
         
                } else {
                    
-                return redirect()->route('admin.post.create')->with('error', 'Post failed to add');
+                return redirect()->route('admin.post.create')->with('error', 'Data failed to add');
         
                }
     }
@@ -191,9 +191,9 @@ class PostController extends Controller
 
         if ($post->trashed()) {
             $post->restore();
-            return redirect()->route('admin.post.trash')->with('success','Post successfully restored');
+            return redirect()->route('admin.post.trash')->with('success','Data successfully restored');
         }else {
-            return redirect()->route('admin.post.trash')->with('error','Post is not in trash');
+            return redirect()->route('admin.post.trash')->with('error','Data is not in trash');
         }
     }
 
@@ -203,7 +203,7 @@ class PostController extends Controller
 
         if (!$post->trashed()) {
         
-            return redirect()->route('admin.post.trash')->with('error','Post is not in trash');
+            return redirect()->route('admin.post.trash')->with('error','Data is not in trash');
         
         }else {
         
@@ -216,7 +216,7 @@ class PostController extends Controller
 
         $post->forceDelete();
 
-        return redirect()->route('admin.post.trash')->with('success', 'Post deleted successfully');
+        return redirect()->route('admin.post.trash')->with('success', 'Data deleted successfully');
         }
     }
 }

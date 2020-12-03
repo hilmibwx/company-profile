@@ -57,11 +57,11 @@ class TestimonialController extends Controller
 
         if ($testi->save()) {
 
-            return redirect()->route('admin.testi')->with('success', 'Testimonial added successfully');
+            return redirect()->route('admin.testi')->with('success', 'Data added successfully');
     
            } else {
                
-            return redirect()->route('admin.testi.create')->with('error', 'Testimonial failed to add');
+            return redirect()->route('admin.testi.create')->with('error', 'Data failed to add');
     
            }
 
@@ -120,11 +120,11 @@ class TestimonialController extends Controller
 
         if ($testi->save()) {
 
-            return redirect()->route('admin.testi')->with('success', 'Testimonial updated successfully');
+            return redirect()->route('admin.testi')->with('success', 'Data updated successfully');
     
            } else {
                
-            return redirect()->route('admin.testi.edit')->with('error', 'Testimonial failed to update');
+            return redirect()->route('admin.testi.edit')->with('error', 'Data failed to update');
     
            }
     }

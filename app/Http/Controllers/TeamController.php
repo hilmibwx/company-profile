@@ -55,11 +55,11 @@ class TeamController extends Controller
 
         if ( $team->save()) {
 
-            return redirect()->route('admin.team')->with('success', 'team added successfully');
+            return redirect()->route('admin.team')->with('success', 'Data added successfully');
     
            } else {
                
-            return redirect()->route('admin.team.create')->with('error', 'team failed to add');
+            return redirect()->route('admin.team.create')->with('error', 'Data failed to add');
     
            }
     }
@@ -119,11 +119,11 @@ class TeamController extends Controller
 
         if ( $team->save()) {
 
-            return redirect()->route('admin.team')->with('success', 'team updated successfully');
+            return redirect()->route('admin.team')->with('success', 'Data updated successfully');
     
            } else {
                
-            return redirect()->route('admin.team.edit')->with('error', 'team failed to update');
+            return redirect()->route('admin.team.edit')->with('error', 'Data failed to update');
     
            }
     }
@@ -140,7 +140,7 @@ class TeamController extends Controller
 
         $team->delete();
 
-        return redirect()->route('admin.team')->with('success', 'team deleted successfully');
+        return redirect()->route('admin.team')->with('success', 'Data deleted successfully');
     
 
     }

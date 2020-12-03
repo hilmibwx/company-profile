@@ -54,8 +54,6 @@ class PortfolioController extends Controller
         $portfolio->desc = $request->desc;
         $portfolio->date = $request->date;
 
-
-        // dd($portfolio);
         $cover = $request->file('cover');
 
         if($cover){
@@ -66,11 +64,11 @@ class PortfolioController extends Controller
 
         if ($portfolio->save()) {
 
-                return redirect()->route('admin.portfolio')->with('success', 'Portfolio added successfully');
+                return redirect()->route('admin.portfolio')->with('success', 'Data added successfully');
         
                } else {
                    
-                return redirect()->route('admin.portfolio.create')->with('error', 'Portfolio failed to add');
+                return redirect()->route('admin.portfolio.create')->with('error', 'Data failed to add');
         
                }
     }
@@ -110,7 +108,6 @@ class PortfolioController extends Controller
     public function update(Request $request, $id)
     {
         \Validator::make($request->all(), [
-            "cover" => "required",
             "category" => "required",
             "desc" => "required"
         ])->validate();
@@ -120,8 +117,7 @@ class PortfolioController extends Controller
         $portfolio->name = $request->name;
         $portfolio->client = $request->client;
         $portfolio->desc = $request->desc;
-        $portfolio->link = $request->link;
-        $portfolio->project_date = $request->project_date;
+        $portfolio->date = $request->date;
 
 
         $new_cover = $request->file('cover');
@@ -139,11 +135,11 @@ class PortfolioController extends Controller
 
         if ($portfolio->save()) {
 
-                return redirect()->route('admin.portfolio')->with('success', 'Portfolio updated successfully');
+                return redirect()->route('admin.portfolio')->with('success', 'Data updated successfully');
         
                } else {
                    
-                return redirect()->route('admin.portfolio.edit')->with('error', 'Portfolio failed to update');
+                return redirect()->route('admin.portfolio.edit')->with('error', 'Data failed to update');
         
                }
     }
@@ -159,6 +155,6 @@ class PortfolioController extends Controller
         $portfolio = Portfolio::findOrFail($id);
         $portfolio->delete();
 
-        return redirect()->route('admin.portfolio')->with('success', 'Portfolio deleted successfully');
+        return redirect()->route('admin.portfolio')->with('success', 'Data deleted successfully');
     }
 }

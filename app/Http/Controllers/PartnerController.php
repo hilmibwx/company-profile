@@ -111,11 +111,11 @@ class PartnerController extends Controller
 
       if ( $partner->save()) {
 
-       return redirect()->route('admin.partner')->with('success', 'partner added successfully');
+       return redirect()->route('admin.partner')->with('success', 'Data added successfully');
 
       } else {
           
-       return redirect()->route('admin.partner.create')->with('error', 'partner failed to add');
+       return redirect()->route('admin.partner.create')->with('error', 'Data failed to add');
 
       }
    }
@@ -136,6 +136,6 @@ class PartnerController extends Controller
     
        $partner->delete();
        
-       return redirect()->route('admin.partner')->with('success', 'partner deleted successfully');
+       return redirect()->route('admin.partner')->with('success', 'Data deleted successfully');
    }
 }

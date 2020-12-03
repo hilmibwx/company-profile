@@ -54,18 +54,18 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="{{ route('homepage') }}">Home</a></li>
+          <li {{ request()->is('/') ? 'class=active' : '' }}><a href="{{ route('homepage') }}">Home</a></li>
 
           <li class="drop-down"><a href="">About</a>
             <ul>
-              <li><a href="{{ route('about') }}">About Us</a></li>
-              <li><a href="{{ route('testi') }}">Testimonials</a></li>
+              <li {{ request()->is('about-us') ? 'class=active' : '' }}><a href="{{ route('about') }}">About Us</a></li>
+              <li {{ request()->is('testimonials') ? 'class=active' : '' }}><a href="{{ route('testi') }}">Testimonials</a></li>
             </ul>
           </li>
 
-          <li><a href="{{ route('service') }}">Services</a></li>
-          <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
-          <li><a href="{{ route('blog') }}">Blog</a></li>
+          <li {{ request()->is('services') ? 'class=active' : '' }}><a href="{{ route('service') }}">Services</a></li>
+          <li {{ request()->is('portfolio') ? 'class=active' : '' }}><a href="{{ route('portfolio') }}">Portfolio</a></li>
+          <li {{ request()->is('blog') ? 'class=active' : '' }}><a href="{{ route('blog') }}">Blog</a></li>
       
         </ul>
       </nav><!-- .nav-menu -->

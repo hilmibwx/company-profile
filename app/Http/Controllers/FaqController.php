@@ -42,11 +42,11 @@ class FaqController extends Controller
         $faq->answer = $request->answer;
         if ( $faq->save()) {
 
-            return redirect()->route('admin.faq')->with('success', 'faq added successfully');
+            return redirect()->route('admin.faq')->with('success', 'Data added successfully');
     
            } else {
                
-            return redirect()->route('admin.faq.create')->with('error', 'faq failed to add');
+            return redirect()->route('admin.faq.create')->with('error', 'Data failed to add');
     
            }
     }
@@ -89,11 +89,11 @@ class FaqController extends Controller
         $faq->answer = $request->answer;
         if ( $faq->save()) {
 
-            return redirect()->route('admin.faq')->with('success', 'faq updated successfully');
+            return redirect()->route('admin.faq')->with('success', 'Data updated successfully');
     
            } else {
                
-            return redirect()->route('admin.faq.create')->with('error', 'faq failed to update');
+            return redirect()->route('admin.faq.create')->with('error', 'Data failed to update');
     
            }
     }
@@ -110,6 +110,6 @@ class FaqController extends Controller
 
         $faq->delete();
 
-        return redirect()->route('admin.faq')->with('success', 'faq deleted successfully');
+        return redirect()->route('admin.faq')->with('success', 'Data deleted successfully');
     }
 }

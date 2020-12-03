@@ -133,10 +133,4 @@ function readURL(input) {
   }
 }
 </script>
-
-<script>
-    $(document).ready(function() {
-        $('#summernote').summernote();
-    });
-  </script>
 @endpush

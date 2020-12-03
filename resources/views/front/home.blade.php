@@ -6,14 +6,14 @@
 <meta name="keywords" content="{{ $general->keyword }}">
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://vanjava.net">
+<meta property="og:url" content="127.0.0.1:8000">
 <meta property="og:title" content="{{ $general->title }}">
 <meta property="og:description" content="{{ $general->meta_desc }}">
 <meta property="og:image" content="{{ asset('storage/'.$general->favicon) }}">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://vanjava.net">
+<meta property="twitter:url" content="127.0.0.1:8000">
 <meta property="twitter:title" content="{{ $general->title }}">
 <meta property="twitter:description" content="{{ $general->meta_desc }}">
 <meta property="twitter:image" content="{{ asset('storage/'.$general->favicon) }}">

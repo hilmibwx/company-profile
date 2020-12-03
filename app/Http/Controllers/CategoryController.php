@@ -50,11 +50,11 @@ class CategoryController extends Controller
 
         if ( $category->save()) {
 
-            return redirect()->route('admin.category')->with('success', 'Category added successfully');
+            return redirect()->route('admin.category')->with('success', 'Data added successfully');
     
            } else {
                
-            return redirect()->route('admin.category')->with('error', 'category failed to add');
+            return redirect()->route('admin.category')->with('error', 'Data failed to add');
     
            }
     }
@@ -106,11 +106,11 @@ class CategoryController extends Controller
 
         if ( $category->save()) {
 
-            return redirect()->route('admin.category')->with('success', 'Category updated successfully');
+            return redirect()->route('admin.category')->with('success', 'Data updated successfully');
     
            } else {
                
-            return redirect()->route('admin.category')->with('error', 'category failed to update');
+            return redirect()->route('admin.category')->with('error', 'Data failed to update');
     
            }
     }
@@ -126,6 +126,6 @@ class CategoryController extends Controller
         $category = Category::findOrFail($id);
         $category->delete();
 
-        return redirect()->route('admin.category')->with('success', 'Category deleted successfully');
+        return redirect()->route('admin.category')->with('success', 'Data deleted successfully');
     }
 }

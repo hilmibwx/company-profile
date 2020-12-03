@@ -50,9 +50,9 @@ class BannerController extends Controller
         }
 
         if ($banner->save()) {
-            return redirect()->route('admin.banner')->with('success', 'banner added successfully');
+            return redirect()->route('admin.banner')->with('success', 'Data added successfully');
            } else {
-            return redirect()->route('admin.banner.create')->with('error', 'banner failed to add');
+            return redirect()->route('admin.banner.create')->with('error', 'Data failed to add');
     
            }
     }
@@ -108,9 +108,9 @@ class BannerController extends Controller
     }   
     // dd($banner);
         if ($banner->update()) {
-            return redirect()->route('admin.banner')->with('success', 'banner updated successfully');
+            return redirect()->route('admin.banner')->with('success', 'Data updated successfully');
            } else {
-            return redirect()->route('admin.banner.edit')->with('error', 'banner failed to update');
+            return redirect()->route('admin.banner.edit')->with('error', 'Data failed to update');
     
            }
     }
@@ -131,6 +131,6 @@ class BannerController extends Controller
             }
         }
         
-        return redirect()->route('admin.banner')->with('success', 'banner deleted successfully');
+        return redirect()->route('admin.banner')->with('success', 'Data deleted successfully');
     }
 }

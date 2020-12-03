@@ -42,11 +42,11 @@ class LinkController extends Controller
 
         if ( $link->save()) {
 
-            return redirect()->route('admin.link')->with('success', 'Link added successfully');
+            return redirect()->route('admin.link')->with('success', 'Data added successfully');
     
            } else {
                
-            return redirect()->route('admin.link.create')->with('error', 'Link failed to add');
+            return redirect()->route('admin.link.create')->with('error', 'Data failed to add');
     
            }
     }
@@ -89,11 +89,11 @@ class LinkController extends Controller
 
         if ( $link->save()) {
 
-            return redirect()->route('admin.link')->with('success', 'Link updated successfully');
+            return redirect()->route('admin.link')->with('success', 'Data updated successfully');
     
            } else {
                
-            return redirect()->route('admin.link.create')->with('error', 'Link failed to update');
+            return redirect()->route('admin.link.create')->with('error', 'Data failed to update');
     
            }
     }
@@ -109,6 +109,6 @@ class LinkController extends Controller
         $link = Link::findOrFail($id);
         $link->delete();
 
-        return redirect()->route('admin.link')->with('success', 'Link deleted successfully');
+        return redirect()->route('admin.link')->with('success', 'Data deleted successfully');
     }
 }

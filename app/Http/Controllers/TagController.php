@@ -51,11 +51,11 @@ class TagController extends Controller
 
         if ( $tag->save()) {
 
-            return redirect()->route('admin.tag')->with('success', 'tag added successfully');
+            return redirect()->route('admin.tag')->with('success', 'Data added successfully');
     
            } else {
                
-            return redirect()->route('admin.tag')->with('error', 'tag failed to add');
+            return redirect()->route('admin.tag')->with('error', 'Data failed to add');
     
            }
     }
@@ -106,11 +106,11 @@ class TagController extends Controller
 
         if ( $tag->save()) {
 
-            return redirect()->route('admin.tag')->with('success', 'tag updated successfully');
+            return redirect()->route('admin.tag')->with('success', 'Data updated successfully');
     
            } else {
                
-            return redirect()->route('admin.tag')->with('error', 'tag failed to update');
+            return redirect()->route('admin.tag')->with('error', 'Data failed to update');
     
            }
     }
